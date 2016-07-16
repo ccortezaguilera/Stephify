@@ -1,0 +1,23 @@
+PODS:
+  - PebbleKit (3.1.1)
+  - Realm (1.0.1):
+    - Realm/Headers (= 1.0.1)
+  - Realm/Headers (1.0.1)
+  - RealmSwift (1.0.1):
+    - Realm (= 1.0.1)
+  - SpeechKit (2.1.6)
+
+DEPENDENCIES:
+  - PebbleKit
+  - RealmSwift
+  - SpeechKit
+
+SPEC CHECKSUMS:
+  PebbleKit: 390181163256815738e467f183e7c65e16b56d25
+  Realm: 2e15e39d35b08abb529e212ed5d8af107b5236c8
+  RealmSwift: d73ea2af08c3676dbdd5e4b669651a0f492162a4
+  SpeechKit: 0ce5adada9a690a65295e0f5f1a4705dae2f2350
+
+PODFILE CHECKSUM: 656f7e6e3be513dc691e6a643eab6c6e77d1429a
+
+COCOAPODS: 1.0.1
