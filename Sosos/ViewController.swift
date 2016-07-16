@@ -9,22 +9,48 @@
 import UIKit
 
 class ViewController: UIViewController, PBPebbleCentralDelegate {
+    
     let defaults = NSUserDefaults.standardUserDefaults()
     var firstTime = false
     var name = ""
     
+    enum Age {
+        case Egg
+        case Child
+        case Adult
+    }
+    
+    let eggImage = UIImage(named: "egg1.png")
+    let childImage = UIImage(named: "egg2.png")
+    
+    var actualAge : Age = .Egg
+    
     @IBOutlet weak var egg: UIImageView!
     @IBOutlet weak var nameOfEgg: UILabel!
+    @IBOutlet weak var petImage: UIImageView!
+    
     
     var connectedWatch: PBWatch?
     var watch: PBWatch?
     var central = PBPebbleCentral.defaultCentral()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         name = defaults.objectForKey("name")! as! String
-        
         nameOfEgg.text! = name
+        
+        switch actualAge {
+        case .Egg:
+            petImage.image = eggImage!
+        case .Child:
+            petImage.image = childImage!
+        default:
+            print("SHIT WENT WRONG")
+        }
+        
+        
+        
+//PEBBLE STUFF-----------------------------------------------------------
         // Set the delegate to receive PebbleKit events
         if central.lastConnectedWatch() != nil{
         watch = central.lastConnectedWatch()
@@ -69,7 +95,6 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
     override func viewDidAppear(animated: Bool) {
         //Is inverted because NSUserDefaults stars that way.
         firstTime = defaults.boolForKey("FirstTime")
-        
         if firstTime == false {
             self.performSegueWithIdentifier("firstTime", sender: self)
             print("Loading Welcome Screen")

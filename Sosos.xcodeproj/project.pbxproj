@@ -11,11 +11,14 @@
 		DD07B72D1D39C98D00730ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07B72C1D39C98D00730ABF /* AppDelegate.swift */; };
 		DD07B72F1D39C98D00730ABF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07B72E1D39C98D00730ABF /* ViewController.swift */; };
 		DD07B7321D39C98D00730ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD07B7301D39C98D00730ABF /* Main.storyboard */; };
-		DD07B7341D39C98D00730ABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD07B7331D39C98D00730ABF /* Assets.xcassets */; };
 		DD07B7371D39C98D00730ABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD07B7351D39C98D00730ABF /* LaunchScreen.storyboard */; };
 		DD7E58761D39FADA004B2A73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7E58711D39FADA004B2A73 /* Assets.xcassets */; };
 		DD7E58781D39FADA004B2A73 /* FirstTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E58741D39FADA004B2A73 /* FirstTimeViewController.swift */; };
 		DD7E58791D39FADA004B2A73 /* VCR_OSD_MONO.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD7E58751D39FADA004B2A73 /* VCR_OSD_MONO.otf */; };
+		EAFD49551D3A11B9009B2B85 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD49541D3A11B9009B2B85 /* MenuViewController.swift */; };
+		EAFD49591D3A133A009B2B85 /* BuyFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD49581D3A133A009B2B85 /* BuyFoodViewController.swift */; };
+		EAFD495B1D3A183A009B2B85 /* PlayGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD495A1D3A183A009B2B85 /* PlayGamesViewController.swift */; };
+		EAFD495D1D3A184C009B2B85 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD495C1D3A184C009B2B85 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +29,16 @@
 		DD07B72C1D39C98D00730ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD07B72E1D39C98D00730ABF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD07B7311D39C98D00730ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DD07B7331D39C98D00730ABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD07B7361D39C98D00730ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD07B7381D39C98D00730ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD07B73F1D39CB8B00730ABF /* SOSOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SOSOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD7E58711D39FADA004B2A73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Sosos/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		DD7E58741D39FADA004B2A73 /* FirstTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstTimeViewController.swift; path = Sosos/FirstTimeViewController.swift; sourceTree = SOURCE_ROOT; };
 		DD7E58751D39FADA004B2A73 /* VCR_OSD_MONO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VCR_OSD_MONO.otf; path = Sosos/VCR_OSD_MONO.otf; sourceTree = SOURCE_ROOT; };
+		EAFD49541D3A11B9009B2B85 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		EAFD49581D3A133A009B2B85 /* BuyFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyFoodViewController.swift; sourceTree = "<group>"; };
+		EAFD495A1D3A183A009B2B85 /* PlayGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayGamesViewController.swift; sourceTree = "<group>"; };
+		EAFD495C1D3A184C009B2B85 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +93,16 @@
 			children = (
 				DD07B72C1D39C98D00730ABF /* AppDelegate.swift */,
 				DD07B72E1D39C98D00730ABF /* ViewController.swift */,
-				DD7E58711D39FADA004B2A73 /* Assets.xcassets */,
 				DD7E58741D39FADA004B2A73 /* FirstTimeViewController.swift */,
-				DD7E58751D39FADA004B2A73 /* VCR_OSD_MONO.otf */,
+				EAFD49541D3A11B9009B2B85 /* MenuViewController.swift */,
+				EAFD49581D3A133A009B2B85 /* BuyFoodViewController.swift */,
+				EAFD495A1D3A183A009B2B85 /* PlayGamesViewController.swift */,
+				EAFD495C1D3A184C009B2B85 /* SettingsViewController.swift */,
 				DD07B7301D39C98D00730ABF /* Main.storyboard */,
-				DD07B7331D39C98D00730ABF /* Assets.xcassets */,
 				DD07B7351D39C98D00730ABF /* LaunchScreen.storyboard */,
 				DD07B7381D39C98D00730ABF /* Info.plist */,
+				DD7E58711D39FADA004B2A73 /* Assets.xcassets */,
+				DD7E58751D39FADA004B2A73 /* VCR_OSD_MONO.otf */,
 				DD07B73F1D39CB8B00730ABF /* SOSOS-Bridging-Header.h */,
 			);
 			path = SOSOS;
@@ -134,6 +143,7 @@
 				TargetAttributes = {
 					DD07B7281D39C98D00730ABF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2R2X8Y69A9;
 					};
 				};
 			};
@@ -162,7 +172,6 @@
 			files = (
 				DD07B7371D39C98D00730ABF /* LaunchScreen.storyboard in Resources */,
 				DD7E58791D39FADA004B2A73 /* VCR_OSD_MONO.otf in Resources */,
-				DD07B7341D39C98D00730ABF /* Assets.xcassets in Resources */,
 				DD7E58761D39FADA004B2A73 /* Assets.xcassets in Resources */,
 				DD07B7321D39C98D00730ABF /* Main.storyboard in Resources */,
 			);
@@ -225,7 +234,11 @@
 			files = (
 				DD07B72F1D39C98D00730ABF /* ViewController.swift in Sources */,
 				DD7E58781D39FADA004B2A73 /* FirstTimeViewController.swift in Sources */,
+				EAFD495D1D3A184C009B2B85 /* SettingsViewController.swift in Sources */,
+				EAFD495B1D3A183A009B2B85 /* PlayGamesViewController.swift in Sources */,
 				DD07B72D1D39C98D00730ABF /* AppDelegate.swift in Sources */,
+				EAFD49551D3A11B9009B2B85 /* MenuViewController.swift in Sources */,
+				EAFD49591D3A133A009B2B85 /* BuyFoodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,10 +351,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D9BC17551B7C9B13C2ACAE0A /* Pods-SOSOS.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SOSOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TJack-2.SOSOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SOSOS-Bridging-Header.h";
 			};
 			name = Debug;
@@ -350,10 +366,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 116382E8F33162A0131F78F6 /* Pods-SOSOS.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SOSOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TJack-2.SOSOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SOSOS-Bridging-Header.h";
 			};
 			name = Release;
