@@ -7,16 +7,88 @@
 //
 
 import UIKit
+import SpeechKit
+
+//IM STUPID IM USING GLOBAL VARIABLES
+enum Age {
+    case Egg
+    case Child
+    case Adult
+}
+let defaults = NSUserDefaults.standardUserDefaults()
+
+var actualAge : Age = .Egg
+
+var nameOfPet = ""
+var daysAlive : NSDate?
+var weight = 0.0
+var hungerOfPet = 3
+var happiness = 3.0
+var money = 100
 
 class ViewController: UIViewController, PBPebbleCentralDelegate {
-
-    @IBOutlet weak var outputLabel: UILabel!
+    var skTransaction:SKTransaction?
+    var skSession:SKSession?
+    var firstTime = false
+    
+    @IBOutlet weak var hunger3: UIImageView!
+    @IBOutlet weak var hunger2: UIImageView!
+    @IBOutlet weak var hunger: UIImageView!
+    
+    let eggImage = UIImage(named: "egg1.png")
+    let childImage = UIImage(named: "Child.png")
+    
+    
+    @IBOutlet weak var egg: UIImageView!
+    @IBOutlet weak var nameOfEgg: UILabel!
+    @IBOutlet weak var petImage: UIImageView!
+    @IBOutlet weak var moneyQuantity: UILabel!
+    
+    var foodTimer = NSTimer()
+    
     var connectedWatch: PBWatch?
     var watch: PBWatch?
     var central = PBPebbleCentral.defaultCentral()
+    
+    func update() {
+        
+        switch hungerOfPet {
+        case 3:
+            hunger3.hidden = true
+            hungerOfPet = 2
+        case 2:
+            hunger2.hidden = true
+            hungerOfPet = 1
+        case 1:
+            hunger.hidden = true
+            hungerOfPet = 0
+        default:
+            print("HOLA")
+        }
+       
+    
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        defaults.setObject(" ", forKey: "name")
+//        nameOfPet = defaults.objectForKey("name")! as! String
+        nameOfEgg.text! = nameOfPet
+        
+        switch actualAge {
+        case .Egg:
+            petImage.image = eggImage!
+        case .Child:
+            petImage.image = childImage!
+        default:
+            print("SOMETHING WENT WRONG")
+        }
+        
+        moneyQuantity.text! = String(money)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1800, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
+
+        
+//PEBBLE STUFF-----------------------------------------------------------
         // Set the delegate to receive PebbleKit events
         if central.lastConnectedWatch() != nil{
         watch = central.lastConnectedWatch()
@@ -30,17 +102,16 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
         self.watch!.appMessagesGetIsSupported({(watch: PBWatch, isAppMessagesSupported: Bool) -> Void in
             if isAppMessagesSupported {
                 // Tell the user using the Label
-                self.outputLabel.text = "AppMessage is supported!"
             }
             else {
-                self.outputLabel.text = "AppMessage is NOT supported!"
             }
         })
         PBPebbleCentral.defaultCentral().run()
         }
         else{
-            self.outputLabel.text = "Please Connect A Pebble Watch To Continue"
         }
+        skTransaction = nil
+        speakString("Your SOSOS is hatching!")
     }
     
     func pebbleCentral(central: PBPebbleCentral, watchDidConnect watch: PBWatch, isNew: Bool) {
@@ -61,6 +132,24 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        //Is inverted because NSUserDefaults stars that way.
+        firstTime = defaults.boolForKey("FirstTime")
+        //defaults.setBool(false, forKey: "FirstTime")
+        if firstTime == false {
+            self.performSegueWithIdentifier("firstTime", sender: self)
+            print("Loading Welcome Screen")
+        }
+    }
+    
+    func speakString(stringToSpeak: String){
+        
+        self.skTransaction = nil
+        self.skSession = SKSession(URL: NSURL(string: SKSServerUrl), appToken: SKSAppKey)
+        self.skTransaction = self.skSession!.speakString(stringToSpeak,
+                                                         withLanguage: "eng-USA",
+                                                         delegate: self)
+    }
 
 }
 
