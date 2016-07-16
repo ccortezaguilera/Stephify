@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="VCR_OSD_MONO.otf">
+            <string>VCROSDMono</string>
+            <string>VCROSDMono</string>
+            <string>VCROSDMono</string>
+            <string>VCROSDMono</string>
+            <string>VCROSDMono</string>
+            <string>VCROSDMono</string>
+            <string>VCROSDMono</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sosos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Sosos is still an egg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2Z-ec-IuP">
+                                <rect key="frame" x="28" y="28" width="318" height="35"/>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="egg1" translatesAutoresizingMaskIntoConstraints="NO" id="aYc-in-NYd">
+                                <rect key="frame" x="37" y="178" width="300" height="336"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Sosos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chP-he-yeW">
+                                <rect key="frame" x="118" y="567" width="138" height="24"/>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You need to walk 4 more miles for your egg to be born" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6H-QF-7Mb">
+                                <rect key="frame" x="20" y="71" width="335" height="99"/>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Hungerbar" translatesAutoresizingMaskIntoConstraints="NO" id="Y8v-bz-jVl">
+                                <rect key="frame" x="20" y="619" width="40" height="40"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13333334028720856" green="0.55294120311737061" blue="0.85490196943283081" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="egg" destination="aYc-in-NYd" id="DPP-h0-MeH"/>
+                        <outlet property="nameOfEgg" destination="chP-he-yeW" id="aJI-fX-rfI"/>
+                        <segue destination="CgZ-S1-diZ" kind="show" identifier="firstTime" id="DO8-cV-i7J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.5" y="224.5"/>
+        </scene>
+        <!--First Time View Controller-->
+        <scene sceneID="UBc-db-ecl">
+            <objects>
+                <viewController id="CgZ-S1-diZ" customClass="FirstTimeViewController" customModule="Sosos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bIZ-Gz-aci"/>
+                        <viewControllerLayoutGuide type="bottom" id="yEx-gV-Ps1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vtc-PL-rU1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey welcome to Sosos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQZ-XL-b2s">
+                                <rect key="frame" x="-38" y="43" width="451" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zeq-bo-aiH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This will be your Sosos... " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhM-Gk-h10">
+                                <rect key="frame" x="65" y="95" width="245" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Y3P-2z-bBl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go on give it a name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q99-1j-gzB">
+                                <rect key="frame" x="82" y="377" width="210" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="uAx-wZ-qJp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2S-nd-VNs">
+                                <rect key="frame" x="65" y="412" width="245" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eGU-tx-JzO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg1" translatesAutoresizingMaskIntoConstraints="NO" id="QrY-FA-yBV">
+                                <rect key="frame" x="96" y="144" width="182" height="209"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkm-Df-s0G">
+                                <rect key="frame" x="135" y="450" width="105" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="JX8-J6-0oT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="21"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" red="0.98431372549019602" green="0.15686274509803921" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="continue:" destination="CgZ-S1-diZ" eventType="touchUpInside" id="AZP-3O-PKd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13333334028720856" green="0.55294120311737061" blue="0.85490196943283081" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="q99-1j-gzB" firstAttribute="centerX" secondItem="E2S-nd-VNs" secondAttribute="centerX" id="9k6-hr-Vn6"/>
+                            <constraint firstItem="QrY-FA-yBV" firstAttribute="centerX" secondItem="q99-1j-gzB" secondAttribute="centerX" id="ByZ-Hg-D1u"/>
+                            <constraint firstItem="QQZ-XL-b2s" firstAttribute="centerX" secondItem="yhM-Gk-h10" secondAttribute="centerX" id="El6-Ou-sb2"/>
+                            <constraint firstItem="E2S-nd-VNs" firstAttribute="top" secondItem="q99-1j-gzB" secondAttribute="bottom" constant="14" id="Fty-CF-xjw"/>
+                            <constraint firstItem="QQZ-XL-b2s" firstAttribute="leading" secondItem="Vtc-PL-rU1" secondAttribute="leadingMargin" constant="-54" id="QXN-Eq-Jdp"/>
+                            <constraint firstItem="qkm-Df-s0G" firstAttribute="top" secondItem="E2S-nd-VNs" secondAttribute="bottom" constant="8" symbolic="YES" id="SzS-eg-95l"/>
+                            <constraint firstItem="yhM-Gk-h10" firstAttribute="trailing" secondItem="E2S-nd-VNs" secondAttribute="trailing" id="WYv-JV-NPz"/>
+                            <constraint firstItem="yEx-gV-Ps1" firstAttribute="top" secondItem="qkm-Df-s0G" secondAttribute="bottom" constant="187" id="XHV-RW-vdh"/>
+                            <constraint firstItem="yhM-Gk-h10" firstAttribute="leading" secondItem="E2S-nd-VNs" secondAttribute="leading" id="Yco-yx-wgr"/>
+                            <constraint firstItem="qkm-Df-s0G" firstAttribute="centerX" secondItem="E2S-nd-VNs" secondAttribute="centerX" id="ab2-Lf-hbh"/>
+                            <constraint firstItem="QrY-FA-yBV" firstAttribute="leading" secondItem="Vtc-PL-rU1" secondAttribute="leadingMargin" constant="80" id="f1c-Ol-5At"/>
+                            <constraint firstItem="yhM-Gk-h10" firstAttribute="top" secondItem="QQZ-XL-b2s" secondAttribute="bottom" constant="8" symbolic="YES" id="hoK-bI-vSM"/>
+                            <constraint firstItem="yhM-Gk-h10" firstAttribute="leading" secondItem="Vtc-PL-rU1" secondAttribute="leadingMargin" constant="49" id="izw-fD-XDT"/>
+                            <constraint firstItem="QrY-FA-yBV" firstAttribute="top" secondItem="yhM-Gk-h10" secondAttribute="bottom" constant="28" id="kBx-CT-F5b"/>
+                            <constraint firstItem="q99-1j-gzB" firstAttribute="leading" secondItem="Vtc-PL-rU1" secondAttribute="leadingMargin" constant="66" id="p3J-U4-Qyo"/>
+                            <constraint firstItem="yEx-gV-Ps1" firstAttribute="top" secondItem="E2S-nd-VNs" secondAttribute="bottom" constant="225" id="peQ-rZ-Rvt"/>
+                            <constraint firstItem="q99-1j-gzB" firstAttribute="top" secondItem="QrY-FA-yBV" secondAttribute="bottom" constant="24" id="wCX-1v-H63"/>
+                            <constraint firstItem="QrY-FA-yBV" firstAttribute="centerX" secondItem="Vtc-PL-rU1" secondAttribute="centerX" id="x0x-rV-tjf"/>
+                            <constraint firstItem="QQZ-XL-b2s" firstAttribute="top" secondItem="bIZ-Gz-aci" secondAttribute="bottom" constant="23" id="xbd-aO-5rN"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="nameOfSosos" destination="E2S-nd-VNs" id="zyw-Zh-fJU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6L-30-r64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.5" y="1012.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hungerbar" width="120" height="120"/>
+        <image name="egg1" width="251" height="286"/>
+    </resources>
+</document>
