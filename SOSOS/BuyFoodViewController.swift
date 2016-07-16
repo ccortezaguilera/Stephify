@@ -26,10 +26,11 @@ class BuyFoodViewController: UIViewController {
     }
     
     @IBAction func buyCookie(sender: AnyObject) {
-        if money > 10 {
+        if money >= 10 {
             happiness += 1.0
             money -= 10
             hungerOfPet -= 1
+            spentMoney += 10
         }
         else {
             error.hidden = false

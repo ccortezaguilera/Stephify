@@ -7,25 +7,13 @@
 //
 
 import UIKit
+import SpeechKit
+
 //IM STUPID IM USING GLOBAL VARIABLES
-enum Age {
-    case Egg
-    case Child
-    case Adult
-}
-let defaults = NSUserDefaults.standardUserDefaults()
 
-var actualAge : Age = .Egg
-
-var nameOfPet = ""
-var daysAlive : NSDate?
-var weight = 0.0
-var hungerOfPet = 3
-var happiness = 3.0
-var money = 100
-
-class ViewController: UIViewController, PBPebbleCentralDelegate {
-    
+class ViewController: UIViewController, PBPebbleCentralDelegate, SKTransactionDelegate {
+    var skTransaction:SKTransaction?
+    var skSession:SKSession?
     var firstTime = false
     
     @IBOutlet weak var hunger3: UIImageView!
@@ -82,7 +70,7 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
         }
         
         moneyQuantity.text! = String(money)
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1800, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
 
         
 //PEBBLE STUFF-----------------------------------------------------------
@@ -107,6 +95,8 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
         }
         else{
         }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshData:", name: "refresh", object: nil)
+
     }
     
     func pebbleCentral(central: PBPebbleCentral, watchDidConnect watch: PBWatch, isNew: Bool) {
@@ -136,5 +126,22 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
             print("Loading Welcome Screen")
         }
     }
+    
+    func speakString(stringToSpeak: String){
+        
+        self.skTransaction = nil
+        self.skSession = SKSession(URL: NSURL(string: SKSServerUrl), appToken: SKSAppKey)
+        self.skTransaction = self.skSession!.speakString(stringToSpeak,
+                                                         withLanguage: "eng-USA",
+                                                         delegate: self)
+    }
+    func refreshData (notification: NSNotification) {
+        moneyQuantity.text! = String(money)
+
+    }
+    @IBAction func unwindToHome (segue:UIStoryboardSegue) {
+        
+    }
+
 }
 

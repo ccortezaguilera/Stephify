@@ -12,6 +12,8 @@ class MenuViewController: UIViewController {
 
     @IBAction func closeMenu(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil, userInfo: nil)
+
     }
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var daysALive: UILabel!
@@ -47,7 +49,8 @@ class MenuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func unwindToMenue (segue:UIStoryboardSegue) {
+    }
 
     /*
     // MARK: - Navigation

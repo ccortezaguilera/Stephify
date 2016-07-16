@@ -26,10 +26,17 @@ func getDataFromWatch (itemToGet: String){
         // Send Ack to Pebble
         let key = self.dataKeyDictionary[itemToGet]
         // If the key is present in the received dictionary
-        if (update[key!] != nil) {
-            // Read the integer value
-            let value = update[key!]!
-        }
+//        if (update["metresWalked"] != nil) {
+//            // Read the integer value
+//            let value = update[key!]!
+//            money += Int(value / 5)
+//        }
+//        if (update["kaloriesBurned"!] != nil) {
+//            // Read the integer value
+//            let value = update[key!]!
+//            hungerOfPet -= Int(value / 500)
+//        }
+        
 
         return true
     })
