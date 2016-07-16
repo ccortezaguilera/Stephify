@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD07B72D1D39C98D00730ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07B72C1D39C98D00730ABF /* AppDelegate.swift */; };
+		DD07B72F1D39C98D00730ABF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07B72E1D39C98D00730ABF /* ViewController.swift */; };
+		DD07B7321D39C98D00730ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD07B7301D39C98D00730ABF /* Main.storyboard */; };
+		DD07B7341D39C98D00730ABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD07B7331D39C98D00730ABF /* Assets.xcassets */; };
+		DD07B7371D39C98D00730ABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD07B7351D39C98D00730ABF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD07B7291D39C98D00730ABF /* SOSOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOSOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD07B72C1D39C98D00730ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD07B72E1D39C98D00730ABF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD07B7311D39C98D00730ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD07B7331D39C98D00730ABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD07B7361D39C98D00730ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD07B7381D39C98D00730ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD07B7261D39C98D00730ABF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD07B7201D39C98D00730ABF = {
+			isa = PBXGroup;
+			children = (
+				DD07B72B1D39C98D00730ABF /* SOSOS */,
+				DD07B72A1D39C98D00730ABF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD07B72A1D39C98D00730ABF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD07B7291D39C98D00730ABF /* SOSOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD07B72B1D39C98D00730ABF /* SOSOS */ = {
+			isa = PBXGroup;
+			children = (
+				DD07B72C1D39C98D00730ABF /* AppDelegate.swift */,
+				DD07B72E1D39C98D00730ABF /* ViewController.swift */,
+				DD07B7301D39C98D00730ABF /* Main.storyboard */,
+				DD07B7331D39C98D00730ABF /* Assets.xcassets */,
+				DD07B7351D39C98D00730ABF /* LaunchScreen.storyboard */,
+				DD07B7381D39C98D00730ABF /* Info.plist */,
+			);
+			path = SOSOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD07B7281D39C98D00730ABF /* SOSOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD07B73B1D39C98D00730ABF /* Build configuration list for PBXNativeTarget "SOSOS" */;
+			buildPhases = (
+				DD07B7251D39C98D00730ABF /* Sources */,
+				DD07B7261D39C98D00730ABF /* Frameworks */,
+				DD07B7271D39C98D00730ABF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SOSOS;
+			productName = SOSOS;
+			productReference = DD07B7291D39C98D00730ABF /* SOSOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD07B7211D39C98D00730ABF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jonas Bauer";
+				TargetAttributes = {
+					DD07B7281D39C98D00730ABF = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DD07B7241D39C98D00730ABF /* Build configuration list for PBXProject "SOSOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD07B7201D39C98D00730ABF;
+			productRefGroup = DD07B72A1D39C98D00730ABF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD07B7281D39C98D00730ABF /* SOSOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD07B7271D39C98D00730ABF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD07B7371D39C98D00730ABF /* LaunchScreen.storyboard in Resources */,
+				DD07B7341D39C98D00730ABF /* Assets.xcassets in Resources */,
+				DD07B7321D39C98D00730ABF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD07B7251D39C98D00730ABF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD07B72F1D39C98D00730ABF /* ViewController.swift in Sources */,
+				DD07B72D1D39C98D00730ABF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD07B7301D39C98D00730ABF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD07B7311D39C98D00730ABF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD07B7351D39C98D00730ABF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD07B7361D39C98D00730ABF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD07B7391D39C98D00730ABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD07B73A1D39C98D00730ABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD07B73C1D39C98D00730ABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SOSOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TJack-2.SOSOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD07B73D1D39C98D00730ABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SOSOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TJack-2.SOSOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD07B7241D39C98D00730ABF /* Build configuration list for PBXProject "SOSOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD07B7391D39C98D00730ABF /* Debug */,
+				DD07B73A1D39C98D00730ABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD07B73B1D39C98D00730ABF /* Build configuration list for PBXNativeTarget "SOSOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD07B73C1D39C98D00730ABF /* Debug */,
+				DD07B73D1D39C98D00730ABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD07B7211D39C98D00730ABF /* Project object */;
+}
