@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SpeechKit
-
 //IM STUPID IM USING GLOBAL VARIABLES
 enum Age {
     case Egg
@@ -27,8 +25,7 @@ var happiness = 3.0
 var money = 100
 
 class ViewController: UIViewController, PBPebbleCentralDelegate {
-    var skTransaction:SKTransaction?
-    var skSession:SKSession?
+    
     var firstTime = false
     
     @IBOutlet weak var hunger3: UIImageView!
@@ -110,8 +107,6 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
         }
         else{
         }
-        skTransaction = nil
-        speakString("Your SOSOS is hatching!")
     }
     
     func pebbleCentral(central: PBPebbleCentral, watchDidConnect watch: PBWatch, isNew: Bool) {
@@ -141,15 +136,5 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
             print("Loading Welcome Screen")
         }
     }
-    
-    func speakString(stringToSpeak: String){
-        
-        self.skTransaction = nil
-        self.skSession = SKSession(URL: NSURL(string: SKSServerUrl), appToken: SKSAppKey)
-        self.skTransaction = self.skSession!.speakString(stringToSpeak,
-                                                         withLanguage: "eng-USA",
-                                                         delegate: self)
-    }
-
 }
 
