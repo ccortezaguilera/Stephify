@@ -20,7 +20,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sosos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SOSOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -70,7 +70,7 @@
         <!--First Time View Controller-->
         <scene sceneID="UBc-db-ecl">
             <objects>
-                <viewController id="CgZ-S1-diZ" customClass="FirstTimeViewController" customModule="Sosos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CgZ-S1-diZ" customClass="FirstTimeViewController" customModule="SOSOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bIZ-Gz-aci"/>
                         <viewControllerLayoutGuide type="bottom" id="yEx-gV-Ps1"/>
