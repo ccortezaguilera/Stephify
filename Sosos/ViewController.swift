@@ -7,37 +7,70 @@
 //
 
 import UIKit
+//IM STUPID IM USING GLOBAL VARIABLES
+enum Age {
+    case Egg
+    case Child
+    case Adult
+}
+let defaults = NSUserDefaults.standardUserDefaults()
+
+var actualAge : Age = .Egg
+
+var nameOfPet = ""
+var daysAlive : NSDate?
+var weight = 0.0
+var hungerOfPet = 3
+var happiness = 3.0
+var money = 100
 
 class ViewController: UIViewController, PBPebbleCentralDelegate {
     
-    let defaults = NSUserDefaults.standardUserDefaults()
     var firstTime = false
-    var name = ""
     
-    enum Age {
-        case Egg
-        case Child
-        case Adult
-    }
+    @IBOutlet weak var hunger3: UIImageView!
+    @IBOutlet weak var hunger2: UIImageView!
+    @IBOutlet weak var hunger: UIImageView!
     
     let eggImage = UIImage(named: "egg1.png")
-    let childImage = UIImage(named: "egg2.png")
+    let childImage = UIImage(named: "Child.png")
     
-    var actualAge : Age = .Egg
     
     @IBOutlet weak var egg: UIImageView!
     @IBOutlet weak var nameOfEgg: UILabel!
     @IBOutlet weak var petImage: UIImageView!
+    @IBOutlet weak var moneyQuantity: UILabel!
     
+    var foodTimer = NSTimer()
     
     var connectedWatch: PBWatch?
     var watch: PBWatch?
     var central = PBPebbleCentral.defaultCentral()
     
+    func update() {
+        
+        switch hungerOfPet {
+        case 3:
+            hunger3.hidden = true
+            hungerOfPet = 2
+        case 2:
+            hunger2.hidden = true
+            hungerOfPet = 1
+        case 1:
+            hunger.hidden = true
+            hungerOfPet = 0
+        default:
+            print("HOLA")
+        }
+       
+    
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        name = defaults.objectForKey("name")! as! String
-        nameOfEgg.text! = name
+        defaults.setObject(" ", forKey: "name")
+//        nameOfPet = defaults.objectForKey("name")! as! String
+        nameOfEgg.text! = nameOfPet
         
         switch actualAge {
         case .Egg:
@@ -45,10 +78,12 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
         case .Child:
             petImage.image = childImage!
         default:
-            print("SHIT WENT WRONG")
+            print("SOMETHING WENT WRONG")
         }
         
-        
+        moneyQuantity.text! = String(money)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1800, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
+
         
 //PEBBLE STUFF-----------------------------------------------------------
         // Set the delegate to receive PebbleKit events
@@ -95,6 +130,7 @@ class ViewController: UIViewController, PBPebbleCentralDelegate {
     override func viewDidAppear(animated: Bool) {
         //Is inverted because NSUserDefaults stars that way.
         firstTime = defaults.boolForKey("FirstTime")
+        //defaults.setBool(false, forKey: "FirstTime")
         if firstTime == false {
             self.performSegueWithIdentifier("firstTime", sender: self)
             print("Loading Welcome Screen")

@@ -9,10 +9,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-    @IBAction func backButton(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
-    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -7,5 +7,5 @@ target 'SOSOS' do
 
   # Pods for SOSOS
   pod "PebbleKit"
-
+  pod "RealmSwift"
 end

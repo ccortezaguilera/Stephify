@@ -7,20 +7,38 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FirstTimeViewController: UIViewController {
     
     
     @IBOutlet weak var errorLabel: UILabel!
+    //TODO: FINISH THE PERSISTEND DATA PART
+    class Pet : Object {
+        dynamic var name = ""
+        dynamic var dayBorn = NSDate()
+        dynamic var money = ""
+        dynamic var happiness = 3.0
+        dynamic var hunger = 3.0
+    }
     
-    
-    let defaults = NSUserDefaults.standardUserDefaults()
     
     func dismissKeyboard() {
         view.endEditing(true)
     }
     
+    class RealmHelper {
+        static func addNewPet(pet: Pet) {
+            let realm = try! Realm()
+            try! realm.write() {
+                realm.add(pet)
+            }
+        }
+        
+    }
+    
     override func viewDidLoad() {
+        defaults.setObject("Test", forKey: "name")
         super.viewDidLoad()
         
         let tap: UITapGestureRecognizer?
@@ -46,19 +64,21 @@ class FirstTimeViewController: UIViewController {
             defaults.setObject(nameOfSosos.text!, forKey: "name")
             defaults.setBool(true, forKey: "FirstTime")
             self.dismissViewControllerAnimated(true, completion: nil)
+            nameOfPet = nameOfSosos.text!
         }
         
         
         
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "firstTime" {
+            var nextScene =  segue.destinationViewController as! ViewController
+            
+            nextScene.nameOfEgg.text! = nameOfSosos.text!
+        }
+        var nextScene = segue.destinationViewController as! MenuViewController
+        nextScene.name.text! = nameOfSosos.text!
+    }
 }

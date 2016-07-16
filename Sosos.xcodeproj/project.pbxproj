@@ -15,6 +15,7 @@
 		DD7E58761D39FADA004B2A73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7E58711D39FADA004B2A73 /* Assets.xcassets */; };
 		DD7E58781D39FADA004B2A73 /* FirstTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E58741D39FADA004B2A73 /* FirstTimeViewController.swift */; };
 		DD7E58791D39FADA004B2A73 /* VCR_OSD_MONO.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD7E58751D39FADA004B2A73 /* VCR_OSD_MONO.otf */; };
+		EA29E0AE1D3A34CD00FE7A77 /* SOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29E0AD1D3A34CD00FE7A77 /* SOSViewController.swift */; };
 		EAFD49551D3A11B9009B2B85 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD49541D3A11B9009B2B85 /* MenuViewController.swift */; };
 		EAFD49591D3A133A009B2B85 /* BuyFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD49581D3A133A009B2B85 /* BuyFoodViewController.swift */; };
 		EAFD495B1D3A183A009B2B85 /* PlayGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD495A1D3A183A009B2B85 /* PlayGamesViewController.swift */; };
@@ -35,6 +36,7 @@
 		DD7E58711D39FADA004B2A73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Sosos/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		DD7E58741D39FADA004B2A73 /* FirstTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstTimeViewController.swift; path = Sosos/FirstTimeViewController.swift; sourceTree = SOURCE_ROOT; };
 		DD7E58751D39FADA004B2A73 /* VCR_OSD_MONO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VCR_OSD_MONO.otf; path = Sosos/VCR_OSD_MONO.otf; sourceTree = SOURCE_ROOT; };
+		EA29E0AD1D3A34CD00FE7A77 /* SOSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOSViewController.swift; sourceTree = "<group>"; };
 		EAFD49541D3A11B9009B2B85 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		EAFD49581D3A133A009B2B85 /* BuyFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyFoodViewController.swift; sourceTree = "<group>"; };
 		EAFD495A1D3A183A009B2B85 /* PlayGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayGamesViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				DD07B72C1D39C98D00730ABF /* AppDelegate.swift */,
 				DD07B72E1D39C98D00730ABF /* ViewController.swift */,
 				DD7E58741D39FADA004B2A73 /* FirstTimeViewController.swift */,
+				EA29E0AD1D3A34CD00FE7A77 /* SOSViewController.swift */,
 				EAFD49541D3A11B9009B2B85 /* MenuViewController.swift */,
 				EAFD49581D3A133A009B2B85 /* BuyFoodViewController.swift */,
 				EAFD495A1D3A183A009B2B85 /* PlayGamesViewController.swift */,
@@ -238,6 +241,7 @@
 				EAFD495B1D3A183A009B2B85 /* PlayGamesViewController.swift in Sources */,
 				DD07B72D1D39C98D00730ABF /* AppDelegate.swift in Sources */,
 				EAFD49551D3A11B9009B2B85 /* MenuViewController.swift in Sources */,
+				EA29E0AE1D3A34CD00FE7A77 /* SOSViewController.swift in Sources */,
 				EAFD49591D3A133A009B2B85 /* BuyFoodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

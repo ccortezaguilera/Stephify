@@ -21,6 +21,9 @@
             <string>VCROSDMono</string>
             <string>VCROSDMono</string>
             <string>VCROSDMono</string>
+            <string>VCROSDMono</string>
+            <string>VCROSDMono</string>
+            <string>VCROSDMono</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -105,7 +108,7 @@
                                 <rect key="frame" x="149" y="614" width="77" height="45"/>
                                 <state key="normal" backgroundImage="Menu"/>
                                 <connections>
-                                    <segue destination="53P-cd-KcY" kind="show" id="8K1-iA-r4J"/>
+                                    <segue destination="53P-cd-KcY" kind="show" identifier="menuSegue" id="8K1-iA-r4J"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Money" translatesAutoresizingMaskIntoConstraints="NO" id="pL9-qx-CMU">
@@ -115,9 +118,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxs-gB-qQs">
-                                <rect key="frame" x="191" y="577" width="30" height="30"/>
+                                <rect key="frame" x="191" y="577" width="65" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="zn2-MB-t9l"/>
+                                    <constraint firstAttribute="width" constant="65" id="zn2-MB-t9l"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,9 +174,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="egg" destination="aYc-in-NYd" id="DPP-h0-MeH"/>
+                        <outlet property="hunger" destination="Y8v-bz-jVl" id="9V1-p1-xj2"/>
+                        <outlet property="hunger2" destination="1IE-bo-TtI" id="w0L-Ph-Mfu"/>
+                        <outlet property="hunger3" destination="LAQ-Ib-lTZ" id="fDT-vx-p8Z"/>
+                        <outlet property="moneyQuantity" destination="fxs-gB-qQs" id="gSG-Py-NMA"/>
                         <outlet property="nameOfEgg" destination="chP-he-yeW" id="aJI-fX-rfI"/>
                         <outlet property="petImage" destination="aYc-in-NYd" id="OuB-Yd-wFv"/>
-                        <segue destination="CgZ-S1-diZ" kind="show" identifier="firstTime" id="DO8-cV-i7J"/>
+                        <segue destination="CgZ-S1-diZ" kind="show" identifier="firstTime" id="rZp-xg-FMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -332,7 +339,12 @@
                     <navigationItem key="navigationItem" id="3kz-Bs-suq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="Happiness" destination="aPd-Vf-Flf" id="1Qr-uJ-zVl"/>
+                        <outlet property="Hunger" destination="mHx-13-CkV" id="yfN-gD-lOb"/>
+                        <outlet property="Weight" destination="J8U-rJ-s56" id="Ip7-gU-p3V"/>
                         <outlet property="currentPet" destination="I33-Fz-xIU" id="i39-Sp-jCT"/>
+                        <outlet property="daysALive" destination="Sxc-lp-qp9" id="jnb-qo-YQF"/>
+                        <outlet property="name" destination="2KV-CI-TxO" id="nm8-rj-wg5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVC-83-rw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgQ-nb-nf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836.5" y="413.5"/>
+            <point key="canvasLocation" x="2423.5" y="413.5"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="DCn-xJ-3ro">
@@ -397,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBO-Cq-i3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836.5" y="1155.5"/>
+            <point key="canvasLocation" x="2423.5" y="1232.5"/>
         </scene>
         <!--Buy Food View Controller-->
         <scene sceneID="WyO-GP-ksY">
@@ -411,7 +423,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anw-gw-rlC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anw-gw-rlC">
                                 <rect key="frame" x="23" y="20" width="40" height="30"/>
                                 <state key="normal" title="BACK">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -420,10 +432,48 @@
                                     <action selector="backButton:" destination="O7T-5R-iMf" eventType="touchUpInside" id="Ftt-BU-8EV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ2-aG-ctk">
+                                <rect key="frame" x="23" y="96" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="ZcH-8f-Jw5"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Cookie"/>
+                                <connections>
+                                    <action selector="buyCookie:" destination="O7T-5R-iMf" eventType="touchUpInside" id="DaH-v4-Rgc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mn-03-gBl">
+                                <rect key="frame" x="20" y="44" width="210" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="td5-ud-70s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="49"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sorry you don't have enoght money to buy this product" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm6-EQ-ry7">
+                                <rect key="frame" x="124" y="108" width="231" height="65"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.13333334028720856" green="0.55294120311737061" blue="0.85490196943283081" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5mn-03-gBl" firstAttribute="top" secondItem="Mr6-8b-T0F" secondAttribute="bottom" constant="24" id="6SK-ag-iLE"/>
+                            <constraint firstItem="cZ2-aG-ctk" firstAttribute="top" secondItem="5mn-03-gBl" secondAttribute="bottom" constant="8" symbolic="YES" id="G6C-32-ITf"/>
+                            <constraint firstItem="anw-gw-rlC" firstAttribute="leading" secondItem="E8f-HM-NTd" secondAttribute="leadingMargin" constant="7" id="IRd-SI-2uj"/>
+                            <constraint firstItem="cZ2-aG-ctk" firstAttribute="top" secondItem="anw-gw-rlC" secondAttribute="bottom" constant="46" id="Med-Tn-I0N"/>
+                            <constraint firstItem="TOC-c9-GsL" firstAttribute="top" secondItem="cZ2-aG-ctk" secondAttribute="bottom" constant="481" id="gKh-id-B6l"/>
+                            <constraint firstItem="5mn-03-gBl" firstAttribute="leading" secondItem="E8f-HM-NTd" secondAttribute="leadingMargin" constant="4" id="hfd-qI-tdb"/>
+                            <constraint firstItem="anw-gw-rlC" firstAttribute="top" secondItem="Mr6-8b-T0F" secondAttribute="bottom" id="kSG-zB-Fs6"/>
+                            <constraint firstItem="anw-gw-rlC" firstAttribute="leading" secondItem="cZ2-aG-ctk" secondAttribute="leading" id="v4j-Ve-edS"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="error" destination="Zm6-EQ-ry7" id="9Wd-4l-dyy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3b-bm-DAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -522,6 +572,7 @@
                             <constraint firstItem="QQZ-XL-b2s" firstAttribute="top" secondItem="bIZ-Gz-aci" secondAttribute="bottom" constant="23" id="xbd-aO-5rN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ORF-1W-aDf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="errorLabel" destination="WdL-fw-CD2" id="hVv-2L-RzW"/>
@@ -530,7 +581,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6L-30-r64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240.5" y="1028.5"/>
+            <point key="canvasLocation" x="240.5" y="998.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eq6-2Y-WoJ">
+            <objects>
+                <viewController id="QUm-6u-oNj" customClass="SOSViewController" customModule="SOSOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ddG-Ya-Y3x"/>
+                        <viewControllerLayoutGuide type="bottom" id="IOq-2o-WYg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="moZ-sx-7T9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOS INFO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0N1-zD-TPt">
+                                <rect key="frame" x="88" y="28" width="199" height="122"/>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="67"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I5l-Vq-Bsv">
+                                <rect key="frame" x="20" y="186" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sS3-o5-F0M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number Of the Person You Want The Message To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wc7-ah-H22">
+                                <rect key="frame" x="20" y="224" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UnO-B8-9OD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBp-pt-K8M">
+                                <rect key="frame" x="135" y="262" width="105" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yz3-IT-2AG"/>
+                                    <constraint firstAttribute="width" constant="105" id="g3w-s3-MXb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="21"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.15686274510000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButton:" destination="QUm-6u-oNj" eventType="touchUpInside" id="gif-Ml-Aoc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13333334028720856" green="0.55294120311737061" blue="0.85490196943283081" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FBp-pt-K8M" firstAttribute="top" secondItem="Wc7-ah-H22" secondAttribute="bottom" constant="8" symbolic="YES" id="6Kd-pt-mXz"/>
+                            <constraint firstItem="0N1-zD-TPt" firstAttribute="top" secondItem="ddG-Ya-Y3x" secondAttribute="bottom" constant="8" symbolic="YES" id="AnD-8f-SHY"/>
+                            <constraint firstItem="I5l-Vq-Bsv" firstAttribute="leading" secondItem="moZ-sx-7T9" secondAttribute="leadingMargin" constant="4" id="DSj-3z-sX2"/>
+                            <constraint firstItem="I5l-Vq-Bsv" firstAttribute="top" secondItem="0N1-zD-TPt" secondAttribute="bottom" constant="36" id="Gtj-uJ-cWr"/>
+                            <constraint firstItem="I5l-Vq-Bsv" firstAttribute="trailing" secondItem="Wc7-ah-H22" secondAttribute="trailing" id="HzI-4a-Zk2"/>
+                            <constraint firstItem="Wc7-ah-H22" firstAttribute="top" secondItem="I5l-Vq-Bsv" secondAttribute="bottom" constant="8" symbolic="YES" id="JRf-bt-cm7"/>
+                            <constraint firstItem="0N1-zD-TPt" firstAttribute="centerX" secondItem="moZ-sx-7T9" secondAttribute="centerX" id="VO3-pK-Okz"/>
+                            <constraint firstItem="0N1-zD-TPt" firstAttribute="leading" secondItem="moZ-sx-7T9" secondAttribute="leadingMargin" constant="72" id="Vg9-ul-3Ak"/>
+                            <constraint firstItem="Wc7-ah-H22" firstAttribute="centerX" secondItem="FBp-pt-K8M" secondAttribute="centerX" id="dSc-uJ-jxc"/>
+                            <constraint firstItem="IOq-2o-WYg" firstAttribute="top" secondItem="FBp-pt-K8M" secondAttribute="bottom" constant="375" id="eem-J5-iPL"/>
+                            <constraint firstItem="0N1-zD-TPt" firstAttribute="centerX" secondItem="I5l-Vq-Bsv" secondAttribute="centerX" id="yin-Sg-57b"/>
+                            <constraint firstItem="I5l-Vq-Bsv" firstAttribute="leading" secondItem="Wc7-ah-H22" secondAttribute="leading" id="zml-MR-uHP"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="phoneNumber" destination="Wc7-ah-H22" id="L5q-g1-Hnv"/>
+                        <outlet property="yourName" destination="I5l-Vq-Bsv" id="jTt-Zn-XnF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xW-7w-CyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1265.5" y="1028.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xqd-nB-LfB">
@@ -554,6 +680,7 @@
     <resources>
         <image name="BuyFoodButton" width="335" height="100"/>
         <image name="CloseButton" width="92" height="92"/>
+        <image name="Cookie" width="203" height="204"/>
         <image name="Hungerbar" width="120" height="120"/>
         <image name="Menu" width="101" height="101"/>
         <image name="Money" width="304" height="304"/>
