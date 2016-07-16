@@ -9,13 +9,25 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PBPebbleCentralDelegate {
 
     var window: UIWindow?
-
+    internal var watch: PBWatch? {
+        didSet {
+            if let watch = watch {
+                watch.appMessagesLaunch({ (_, error) in
+                    if error != nil {
+                        print("App launched!")
+                    }
+                })
+            }
+        }
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let myAppUUID: NSUUID = NSUUID(UUIDBytes: "60aa1421-427d-442f-a84e-88623ba1b681")
+        PBPebbleCentral.defaultCentral().appUUID = myAppUUID
         return true
     }
 
@@ -40,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
 
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9ED1D0556285854D9A10C4E /* Pods_SOSOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC60989B8733CBA8C5EF940 /* Pods_SOSOS.framework */; };
 		DD07B72D1D39C98D00730ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07B72C1D39C98D00730ABF /* AppDelegate.swift */; };
 		DD07B72F1D39C98D00730ABF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07B72E1D39C98D00730ABF /* ViewController.swift */; };
 		DD07B7321D39C98D00730ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD07B7301D39C98D00730ABF /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		116382E8F33162A0131F78F6 /* Pods-SOSOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOSOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOSOS/Pods-SOSOS.release.xcconfig"; sourceTree = "<group>"; };
+		9FC60989B8733CBA8C5EF940 /* Pods_SOSOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOSOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9BC17551B7C9B13C2ACAE0A /* Pods-SOSOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOSOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SOSOS/Pods-SOSOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD07B7291D39C98D00730ABF /* SOSOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOSOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD07B72C1D39C98D00730ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD07B72E1D39C98D00730ABF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,7 @@
 		DD07B7331D39C98D00730ABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD07B7361D39C98D00730ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD07B7381D39C98D00730ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD07B73F1D39CB8B00730ABF /* SOSOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SOSOS-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +34,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9ED1D0556285854D9A10C4E /* Pods_SOSOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		798B88A858C4323DBA747E5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9BC17551B7C9B13C2ACAE0A /* Pods-SOSOS.debug.xcconfig */,
+				116382E8F33162A0131F78F6 /* Pods-SOSOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8FAD367FE58F7EBCA5384431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FC60989B8733CBA8C5EF940 /* Pods_SOSOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD07B7201D39C98D00730ABF = {
 			isa = PBXGroup;
 			children = (
 				DD07B72B1D39C98D00730ABF /* SOSOS */,
 				DD07B72A1D39C98D00730ABF /* Products */,
+				798B88A858C4323DBA747E5A /* Pods */,
+				8FAD367FE58F7EBCA5384431 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +85,7 @@
 				DD07B7331D39C98D00730ABF /* Assets.xcassets */,
 				DD07B7351D39C98D00730ABF /* LaunchScreen.storyboard */,
 				DD07B7381D39C98D00730ABF /* Info.plist */,
+				DD07B73F1D39CB8B00730ABF /* SOSOS-Bridging-Header.h */,
 			);
 			path = SOSOS;
 			sourceTree = "<group>";
@@ -71,9 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD07B73B1D39C98D00730ABF /* Build configuration list for PBXNativeTarget "SOSOS" */;
 			buildPhases = (
+				B4F147561A1DB47DCF5FF0E8 /* [CP] Check Pods Manifest.lock */,
 				DD07B7251D39C98D00730ABF /* Sources */,
 				DD07B7261D39C98D00730ABF /* Frameworks */,
 				DD07B7271D39C98D00730ABF /* Resources */,
+				762EB7AA6FC1265FF81B2814 /* [CP] Embed Pods Frameworks */,
+				B6F20B78CB13DED956F04736 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		762EB7AA6FC1265FF81B2814 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SOSOS/Pods-SOSOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4F147561A1DB47DCF5FF0E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B6F20B78CB13DED956F04736 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SOSOS/Pods-SOSOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD07B7251D39C98D00730ABF /* Sources */ = {
@@ -247,23 +324,27 @@
 		};
 		DD07B73C1D39C98D00730ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9BC17551B7C9B13C2ACAE0A /* Pods-SOSOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SOSOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TJack-2.SOSOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SOSOS-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		DD07B73D1D39C98D00730ABF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 116382E8F33162A0131F78F6 /* Pods-SOSOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SOSOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TJack-2.SOSOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SOSOS-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +367,7 @@
 				DD07B73D1D39C98D00730ABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
